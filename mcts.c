@@ -15,7 +15,7 @@ static inline void uct_score_test(int n_total, int n_visits, double score)
     fx16_t fx16_score = to_fx16_double(score);
 
     printf("n_total: %d, n_visits: %d, score: %.15f\n", n_total, n_visits, score);
-    printf("fp n_total: %d, fp n_visits: %d, fp score: %d\n", fx16_n_total, fx16_n_visits, fx16_score);
+    printf("fx n_total: %d, fx n_visits: %d, fx score: %d\n", fx16_n_total, fx16_n_visits, fx16_score);
     printf("\n");
 
     // score / n_visits
