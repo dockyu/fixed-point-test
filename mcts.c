@@ -1,14 +1,9 @@
 #include <stdio.h>
-#include <assert.h>
 #include <float.h>
-#include <time.h>
 #include <math.h>
-#include <stdlib.h>
 
 #include "mcts.h"
 #include "fpmath.h"
-
-#define MAX_LINES 10000 // 假設文件最多有10000行
 
 static inline void uct_score_test(int n_total, int n_visits, double score)
 {
