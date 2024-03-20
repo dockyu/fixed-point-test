@@ -11,13 +11,13 @@ LDFLAGS=-lm
 TARGET=mcts
 
 # 定義源文件
-SOURCES=mcts.c my_fp.c
+SOURCES=mcts.c fpmath.c
 
 # 定義對象文件
 OBJS=$(SOURCES:.c=.o)
 
 # 定義頭文件
-HEADERS=mcts.h my_fp.h
+HEADERS=mcts.h fpmath.h
 
 # 預設目標
 all: $(TARGET)
