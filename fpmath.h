@@ -21,10 +21,10 @@ static inline double to_Float(fx16_t fp) {
     return (double)fp / FIXED_POINT_COEFFICIENT;
 }
 
-int fx_mul(int, int);
+fx16_t fx_mul(fx16_t, fx16_t);
 
-int fx_div(int, int);
+fx16_t fx_div(fx16_t, fx16_t);
 
-int fx_log(unsigned int);
+fx16_t fx_log(fx16_t);
 
-int fx_sqrt(int);
+fx16_t fx_sqrt(fx16_t);
