@@ -1,5 +1,8 @@
 *.o
 mcts
+
+### Windows
+*.exe
 ### VisualStudioCode ###
 .vscode/*
 !.vscode/settings.json
