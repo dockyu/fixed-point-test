@@ -1,14 +1,14 @@
 #include "fpmath.h"
 
 // 定點數乘法，輸入和輸出都是定點數
-int fp_mul(int fixedPointValue1, int fixedPointValue2) {
+int fx_mul(int fixedPointValue1, int fixedPointValue2) {
     // 使用 long long 避免溢出，計算後右移 FRAC_BITS 以調整精度
     long long temp = (long long)fixedPointValue1 * (long long)fixedPointValue2;
     return (int)(temp >> FRAC_BITS);
 }
 
 // 定點數除法，輸入和輸出都是定點數
-int fp_div(int fixedPointValue1, int fixedPointValue2) {
+int fx_div(int fixedPointValue1, int fixedPointValue2) {
     // 為了保持精度，將被除數左移 FRAC_BITS 位後進行除法
     long long temp = ((long long)fixedPointValue1 << FRAC_BITS) / fixedPointValue2;
     return (int)temp;
@@ -40,7 +40,7 @@ int fx_log(unsigned int x) {
 // fractional part and returns a fixed point with 16 bit fractional part. It 
 // requires that v is positive. The computation use only 32 bit registers and 
 // simple operations.
-int sqrt_fx16_16_to_fx16_16(int v) {
+int fx_sqrt(int v) {
     uint32_t t, q, b, r;
     r = (int32_t)v; 
     q = 0;          
